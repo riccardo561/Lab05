@@ -72,10 +72,14 @@ def main(page: ft.Page):
         txt_responsabile.value = f"Responsabile: {deposito.get_responsabile()}"
         page.update()
     def aumenta_contatore(e):
-            contatore.value+=1
+            v=int(contatore.value)
+            v+=1
+            contatore.value=v
             contatore.update()
     def diminuisci_contatore(e):
-            contatore.value-=1
+            v = int(contatore.value)
+            v -= 1
+            contatore.value = v
             contatore.update()
     def aggiunta_strumento(e):
         if (not text_tipo.value.strip()) or text_tipo.value.isdigit():
